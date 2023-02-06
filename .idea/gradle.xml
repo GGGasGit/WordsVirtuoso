@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Topics/ANSI colors/16 colors – foreground color" />
+            <option value="$PROJECT_DIR$/Topics/ANSI colors/ANSI set color sequence" />
+            <option value="$PROJECT_DIR$/Topics/ANSI colors/RGB colors – foreground and background colors" />
+            <option value="$PROJECT_DIR$/Topics/ANSI colors/Set string color to Beige" />
+            <option value="$PROJECT_DIR$/Topics/ANSI colors/Set string color to Green" />
+            <option value="$PROJECT_DIR$/Topics/ANSI colors/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Commonly Used Regex/First (and) last name" />
+            <option value="$PROJECT_DIR$/Topics/Commonly Used Regex/Groups syntax" />
+            <option value="$PROJECT_DIR$/Topics/Commonly Used Regex/New dates" />
+            <option value="$PROJECT_DIR$/Topics/Commonly Used Regex/Pa" />
+            <option value="$PROJECT_DIR$/Topics/Commonly Used Regex/Password validation" />
+            <option value="$PROJECT_DIR$/Topics/Commonly Used Regex/Phones without 9" />
+            <option value="$PROJECT_DIR$/Topics/Commonly Used Regex/Right group" />
+            <option value="$PROJECT_DIR$/Topics/Commonly Used Regex/Slash one" />
+            <option value="$PROJECT_DIR$/Topics/Commonly Used Regex/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Mutable Set/Additional elements" />
+            <option value="$PROJECT_DIR$/Topics/Mutable Set/Bad egg" />
+            <option value="$PROJECT_DIR$/Topics/Mutable Set/Combination" />
+            <option value="$PROJECT_DIR$/Topics/Mutable Set/Division problem" />
+            <option value="$PROJECT_DIR$/Topics/Mutable Set/Filter" />
+            <option value="$PROJECT_DIR$/Topics/Mutable Set/Little more and little less" />
+            <option value="$PROJECT_DIR$/Topics/Mutable Set/MutableSet properties" />
+            <option value="$PROJECT_DIR$/Topics/Mutable Set/Remove it all" />
+            <option value="$PROJECT_DIR$/Topics/Mutable Set/Subtraction" />
+            <option value="$PROJECT_DIR$/Topics/Mutable Set/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Mutable Set/To clear or not to clear" />
+            <option value="$PROJECT_DIR$/Topics/Quantifiers/A simple regex" />
+            <option value="$PROJECT_DIR$/Topics/Quantifiers/Float number regex" />
+            <option value="$PROJECT_DIR$/Topics/Quantifiers/Matching digits" />
+            <option value="$PROJECT_DIR$/Topics/Quantifiers/OK Computer" />
+            <option value="$PROJECT_DIR$/Topics/Quantifiers/The meaning of the {n} quantifier" />
+            <option value="$PROJECT_DIR$/Topics/Quantifiers/The name of a variable" />
+            <option value="$PROJECT_DIR$/Topics/Quantifiers/The plus quantitifier" />
+            <option value="$PROJECT_DIR$/Topics/Quantifiers/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Quantifiers/UUIDs" />
+            <option value="$PROJECT_DIR$/Topics/Regexps in use/Aaaaaaa to a" />
+            <option value="$PROJECT_DIR$/Topics/Regexps in use/Camels vs. snakes" />
+            <option value="$PROJECT_DIR$/Topics/Regexps in use/Find the difference" />
+            <option value="$PROJECT_DIR$/Topics/Regexps in use/Limit" />
+            <option value="$PROJECT_DIR$/Topics/Regexps in use/Nickname parser" />
+            <option value="$PROJECT_DIR$/Topics/Regexps in use/Removing chords" />
+            <option value="$PROJECT_DIR$/Topics/Regexps in use/Serial number for game" />
+            <option value="$PROJECT_DIR$/Topics/Regexps in use/Sike, that's the wrong number" />
+            <option value="$PROJECT_DIR$/Topics/Regexps in use/Splitting with spaces" />
+            <option value="$PROJECT_DIR$/Topics/Regexps in use/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Regexps in use/Web colors" />
+            <option value="$PROJECT_DIR$/Topics/Set/Combination" />
+            <option value="$PROJECT_DIR$/Topics/Set/Conversion" />
+            <option value="$PROJECT_DIR$/Topics/Set/Element problem" />
+            <option value="$PROJECT_DIR$/Topics/Set/Elementary" />
+            <option value="$PROJECT_DIR$/Topics/Set/First things first" />
+            <option value="$PROJECT_DIR$/Topics/Set/Happy birthday" />
+            <option value="$PROJECT_DIR$/Topics/Set/Non-empty set" />
+            <option value="$PROJECT_DIR$/Topics/Set/Subtraction" />
+            <option value="$PROJECT_DIR$/Topics/Set/The truth is" />
+            <option value="$PROJECT_DIR$/Topics/Set/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Set/Two sides of the same" />
+            <option value="$PROJECT_DIR$/Words Virtuoso/task" />
+            <option value="$PROJECT_DIR$/Words Virtuoso/task/build/classes/kotlin" />
+            <option value="$PROJECT_DIR$/Words Virtuoso/task/build/reports/tests" />
+            <option value="$PROJECT_DIR$/Words Virtuoso/task/build/test-results" />
+            <option value="$PROJECT_DIR$/Words Virtuoso/task/build/tmp" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

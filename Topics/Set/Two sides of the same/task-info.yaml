@@ -1,0 +1,15 @@
+type: code
+files:
+- name: src/Main.kt
+  visible: true
+  text: |-
+    fun intsToSet(ints: MutableList<Int>): Set<Int> {
+        // write here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/20634#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Thu, 02 Feb 2023 08:50:29 UTC
+record: -1

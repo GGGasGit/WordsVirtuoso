@@ -1,0 +1,22 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: ad9e03f0-4bd4-46db-k79e-94ca17d4b74f
+- text: 1c1a3de4-c711-4e9c-bed2-e75fd69ce920
+- text: f66024c3_50f8_442e_9387_28746581f472
+- text: f087d9fc-xyz3-4a3f-93e0-bdb8d9b68268
+- text: 92ae7a-94f-40c-a22-de4b42dd13
+files:
+- name: src/Main.kt
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    fun main(args: Array<String>) {
+      // put your code here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/14574#comment
+status: Solved
+record: -1
+local_check: false

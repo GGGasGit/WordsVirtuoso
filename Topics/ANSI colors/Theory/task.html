@@ -1,0 +1,229 @@
+<h2>ANSI colors</h2>
+<html><body><p>Command line terminals can do much more than just sequentially print text in specific text and background colors. Most terminals support <strong>ANSI escape sequences</strong> – commands that can change the text and background color, move the cursor to a specified position, or define certain text attributes. You can use them to create really impressive terminal applications.</p>
+<p>In this topic, we will look into the ANSI codes that concern coloring.</p>
+<h5 id="standardization-history">Standardization history</h5>
+<p>In older days, terminals supported various methods for text, color, and cursor manipulation, and in many cases, those were incompatible with each other. This problem was fixed by <strong>ECMA</strong> (European Computer Manufacturers Association) and <strong>ANSI</strong> (American National Standards Institute), two of numerous organizations for standardization, which produced the <strong>ECMA-48</strong> and the <strong>ANSI X3.64</strong> standards respectively.</p>
+<p>One of the first terminals to use the ECMA-48 standard was DEC's VT100, which was a commercial success. As a result, all successive DEC terminals (e.g., VT103 and VT220), as well as terminals from other vendors, began using these standards.</p>
+<p>All diverse standards were finally combined by <strong>ISO</strong> (the International Organization for Standardization) into the <strong>ISO/IEC 6429</strong> standard in 1992 (last reviewed in 2020). On a side note, the <strong>Open Document Architecture</strong> standard (<strong>ODA</strong> or <strong>ISO 8613</strong>), which is intended to replace all proprietary document file formats with an open source format, supports ANSI codes since 1995.</p>
+<h5 id="ansi-escape-sequences">ANSI escape sequences</h5>
+<p>The ANSI set of the ASCII character encoding standard (American Standard Code for Information Interchange) defines certain non-printable characters. In the following table, there are some examples:</p>
+<table border="1" cellpadding="1" cellspacing="1" style="height: 258px; width: 733px;">
+<thead>
+<tr>
+<th>Name</th>
+<th>Abbreviation</th>
+<th>Value</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bell</td>
+<td>BEL</td>
+<td>7</td>
+<td>Produces a sound</td>
+</tr>
+<tr>
+<td>Backspace</td>
+<td>BS</td>
+<td>8</td>
+<td>Moves the cursor one position to the left</td>
+</tr>
+<tr>
+<td>Carriage Return</td>
+<td>CR</td>
+<td>13</td>
+<td>Moves the cursor to the first column</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>ESC</td>
+<td>27</td>
+<td>Initiates an escape sequence</td>
+</tr>
+</tbody>
+</table>
+<p>ANSI escape sequences used for color setting start with the non-printable <code class="language-kotlin">ESC</code> character followed by the opening bracket <code class="language-kotlin">[</code> and some other characters or digits, depending on the command, and end with the <code class="language-kotlin">m</code> character:  <code class="language-kotlin">ESC[&lt;various characters&gt;m</code>. The sequence <code class="language-kotlin">ESC</code> + <code class="language-kotlin">[</code> is also called CSI, which stands for "Control Sequence Introducer".</p>
+<p>To print <code class="language-kotlin">ESC</code> in Kotlin, we have to use the UTF-8 escape character <code class="language-kotlin">\u</code> together with the UTF-8 <code class="language-kotlin">ESC</code> character code (<code class="language-kotlin">001b</code>):</p>
+<pre><code class="language-kotlin">println("\u001b")
+
+// OR
+
+println("\u001B")</code></pre>
+<p>Note that if you copy <code class="language-kotlin">\u001b</code> and then paste it into IntelliJ IDEA within double quotation marks (" "), then a second backslash is added automatically (<code class="language-kotlin">"\\u001b"</code>). This, of course, will just print <code class="language-kotlin">\u001b</code> and will not work as an escape sequence.</p>
+<h5 id="terminal-support">Terminal support</h5>
+<p>Command line terminals for Unix-based or Unix-like operating systems (e.g., Linux, OS X, BSD, Solaris, etc.) generally support ANSI escape sequences.</p>
+<p>The Windows 10 Command Prompt (cmd) and Windows Powershell also support ANSI colors; however, this option has first to be enabled by changing a registry value: the <code class="language-kotlin">HKEY_CURRENT_USER\Console\VirtualTerminalLevel</code> key should be set to <code class="language-kotlin">1</code>. In case the key doesn't exist, you first need to create it as a DWORD with the value <code class="language-kotlin">1</code>.</p>
+<p>The IntelliJ IDEA terminal supports ANSI colors by default. However, it doesn't support other ANSI sequences, like cursor movement codes.</p>
+<h5 id="16-colors">16 colors</h5>
+<p>You can get the 16 colours of the regular ANSI color scheme with the following ANSI sequence:</p>
+<pre><code class="language-kotlin">\u001b[&lt;Integer Number&gt;m</code></pre>
+<p>where <code class="language-kotlin">&lt;Integer Number&gt;</code> is one of 32 specific numbers that define either the foreground or the background color – you can find them in the following table. Originally, there where only 8 set colors (30 to 37 and 40 to 47), the other 8 where added afterward.</p>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
+<thead>
+<tr>
+<th>Color</th>
+<th>Foreground</th>
+<th>Background</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Black</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">40</td>
+</tr>
+<tr>
+<td>Red</td>
+<td style="text-align: center;">31</td>
+<td style="text-align: center;">41</td>
+</tr>
+<tr>
+<td>Green</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">42</td>
+</tr>
+<tr>
+<td>Yellow</td>
+<td style="text-align: center;">33</td>
+<td style="text-align: center;">43</td>
+</tr>
+<tr>
+<td>Blue</td>
+<td style="text-align: center;">34</td>
+<td style="text-align: center;">44</td>
+</tr>
+<tr>
+<td>Magenta</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">45</td>
+</tr>
+<tr>
+<td>Cyan</td>
+<td style="text-align: center;">36</td>
+<td style="text-align: center;">46</td>
+</tr>
+<tr>
+<td>White</td>
+<td style="text-align: center;">37</td>
+<td style="text-align: center;">47</td>
+</tr>
+<tr>
+<td>Bright Black</td>
+<td style="text-align: center;">90</td>
+<td style="text-align: center;">100</td>
+</tr>
+<tr>
+<td>Bright Red</td>
+<td style="text-align: center;">91</td>
+<td style="text-align: center;">101</td>
+</tr>
+<tr>
+<td>Bright Green</td>
+<td style="text-align: center;">92</td>
+<td style="text-align: center;">102</td>
+</tr>
+<tr>
+<td>Bright Yellow</td>
+<td style="text-align: center;">93</td>
+<td style="text-align: center;">103</td>
+</tr>
+<tr>
+<td>Bright Blue</td>
+<td style="text-align: center;">94</td>
+<td style="text-align: center;">104</td>
+</tr>
+<tr>
+<td>Bright Magenta</td>
+<td style="text-align: center;">95</td>
+<td style="text-align: center;">105</td>
+</tr>
+<tr>
+<td>Bright Cyan</td>
+<td style="text-align: center;">96</td>
+<td style="text-align: center;">106</td>
+</tr>
+<tr>
+<td>Bright White</td>
+<td style="text-align: center;">97</td>
+<td style="text-align: center;">107</td>
+</tr>
+</tbody>
+</table>
+<p>Thus, in order to set the text color to magenta, use the <code class="language-kotlin">\u001b[35m</code> ANSI sequence, and to set the background color to white – the <code class="language-kotlin">\u001b[47m</code> ANSI sequence. You can define the foreground and background colors with one single sequence if you separate them by a semicolon <code class="language-kotlin">;</code>. For example, the sequence <code class="language-kotlin">\u001b[37;44m</code> sets the text color to white and the background to blue.</p>
+<p>All settings can be returned to their default values with the help of the <code class="language-kotlin">\u001b[0m</code> sequence. This also works for the sequences we will examine in the next sections.</p>
+<p>The colors are not implemented the same way in all terminals. You can check the difference by running the following code in various terminals:</p>
+<pre><code class="language-kotlin">// Set foreground colors
+for (i in 30..37) print("\u001b[${i}m ${"%3d".format(i)} ")
+for (i in 90..97) print("\u001b[${i}m ${"%3d".format(i)} ")
+
+// Reset colors
+println("\u001B[0m")
+
+// Set background colors
+for (i in 40..47) print("\u001b[${i}m ${"%3d".format(i)} ")
+for (i in 100..107) print("\u001b[${i}m ${"%3d".format(i)} ")
+
+// Reset colors
+println("\u001B[0m")</code></pre>
+<p>The <code class="language-kotlin">String.format()</code> function is used for formatting text the way we want. In the above code, it is used for printing each integer within a 3 character range aligned to the right. You can find more information in Kotlin <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/format.html" rel="noopener noreferrer nofollow" target="_blank">format</a> documentation.</p>
+<p>The IntelliJ IDEA terminal output:</p>
+<p style="text-align: center;"><img alt="" height="59" name="c1.png" src="https://ucarecdn.com/685de3f0-83e6-40f1-8a2b-500a481ae38e/" width="730"/></p>
+<p>The Windows 10 cmd terminal output:</p>
+<p style="text-align: center;"><img alt="" height="49" name="c2.png" src="https://ucarecdn.com/ae0e4312-163c-4f05-a4f8-1bba8c17c4e8/" width="729"/></p>
+<p>The Windows 10 Windows Powershell output:</p>
+<p style="text-align: center;"><img alt="" height="44" name="c3.png" src="https://ucarecdn.com/3d8c7886-6978-44d5-a761-9c1933f8eb56/" width="732"/></p>
+<h5 id="256-colors">256 colors</h5>
+<p>With extended ANSI sequences, you can get 256 colors. For foreground colors, use:</p>
+<pre><code class="language-kotlin">\u001b[38;5;&lt;Color Number&gt;m</code></pre>
+<p>For background colors, use:</p>
+<pre><code class="language-kotlin">\u001b[48;5;&lt;Color Number&gt;m</code></pre>
+<p>Unlike in the case of the 16-color scheme, now the color numbers are the same for both the foreground and the background. The color numbers are defined as follows:</p>
+<ul>
+<li><strong>0–15</strong>: These are the same as the 16 standard colors discussed in the previous section. For example, number 1 is the red foreground or background color, which in the previous section we defined as 31 and 41 respectively.</li>
+<li><strong>16–231</strong>: These are 216 colors constructed as <code class="language-kotlin">16 + 36 * r + 6 * g + b</code>, where <code class="language-kotlin">r</code>, <code class="language-kotlin">g</code>, and <code class="language-kotlin">b</code> stand for Red, Green, and Blue respectively. Each one of these can take values from 0 to 5, where 0 stands for the darkest shade of the given color and 5 for the brightest.</li>
+<li><strong>232–255</strong>: These are grayscale colors from black to white in 24 steps; 232 stands for black and 255 – for white.</li>
+</ul>
+<p>We can display all 256 colors with the following code:</p>
+<pre><code class="language-kotlin">// Standard foreground colors
+for (i in 0..15) print("\u001b[38;5;${i}m ${"%3d".format(i)}")
+
+// 216 foreground colors
+for (i in 16..231) {
+    if ((i - 16) % 36 == 0) println()
+    print("\u001b[38;5;${i}m ${"%3d".format(i)}")
+}
+println("\u001B[0m")
+
+// Foreground grayscale shades
+for (i in 232..255) print("\u001b[38;5;${i}m ${"%3d".format(i)}")
+println()
+
+// Standard background colors
+for (i in 0..15) print("\u001b[48;5;${i}m ${"%3d".format(i)}")
+
+// 216 background colors
+for (i in 16..231) {
+    if ((i - 16) % 36 == 0) println("\u001B[0m")
+    print("\u001b[48;5;${i}m ${"%3d".format(i)}")
+}
+println("\u001B[0m")
+
+// Background grayscale shades
+for (i in 232..255) print("\u001b[48;5;${i}m ${"%3d".format(i)}")
+println("\u001B[0m")</code></pre>
+<p>The output of the above code in the IntelliJ IDEA terminal is the following:</p>
+<p><img alt="" height="446" name="c4.png" src="https://ucarecdn.com/b0649e7e-4632-4884-8ff6-af249efeb749/" width="1455"/></p>
+<h5 id="rgb-colors">RGB colors</h5>
+<p>For 24-bit RGB text colors, use the sequence:</p>
+<pre><code class="language-kotlin">\u001b[38;2;&lt;red&gt;;&lt;green&gt;;&lt;blue&gt;m</code></pre>
+<p>For background colours, use the following sequence:</p>
+<pre><code class="language-kotlin">\u001b[48;2;&lt;red&gt;;&lt;green&gt;;&lt;blue&gt;m</code></pre>
+<p>Here, <code class="language-kotlin">red</code>, <code class="language-kotlin">green</code>, and <code class="language-kotlin">blue</code> are the corresponding color values, each within the range 0 – 255.</p>
+<p>As an example, we use the following code to print a text with certain colors. Both foreground and background colors are set within the same ANSI sequence, divided by a semicolon <code class="language-kotlin">;</code>.</p>
+<pre><code class="language-kotlin">print("\u001b[38;2;255;255;0;48;2;255;0;127mHello World!\u001B[0m")</code></pre>
+<p>Between the <code class="language-kotlin">\u001b[</code> and <code class="language-kotlin">m</code>, we set the text color as <code class="language-kotlin">38;2;255;255;0</code> and the background as <code class="language-kotlin">48;2;255;0;127</code>, divided by <code class="language-kotlin">;</code>.</p>
+<p>The above code results in:</p>
+<p><img alt="" height="50" name="c5.png" src="https://ucarecdn.com/83c65f9d-d35d-4fb5-923c-c0e0c9546470/" width="144"/></p>
+<h5 id="conclusion">Conclusion</h5>
+<p>We have discussed how to use colors in various command line terminals. This may be used for numerous purposes – from creating fabulous terminal applications to using color in logging messages for easier log reviewing.</p></body></html>

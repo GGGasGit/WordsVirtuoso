@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Topics-Commonly_Used_Regex-New_dates" external.linked.project.path="$MODULE_DIR$/../../../../../Topics/Commonly Used Regex/New dates" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="Words Virtuoso" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Commonly Used Regex/New dates">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Commonly Used Regex/New dates/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Commonly Used Regex/New dates/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Commonly Used Regex/New dates/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

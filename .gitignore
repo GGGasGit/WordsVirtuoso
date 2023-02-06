@@ -1,0 +1,27 @@
+# Project exclude paths
+/.gradle/
+/Topics/Commonly Used Regex/First (and) last name/out/
+/Topics/Commonly Used Regex/First (and) last name/out/production/classes/
+/Topics/Commonly Used Regex/Password validation/out/
+/Topics/Commonly Used Regex/Password validation/out/production/classes/
+/Topics/Commonly Used Regex/Phones without 9/out/
+/Topics/Commonly Used Regex/Phones without 9/out/production/classes/
+/Topics/Mutable Set/Division problem/out/
+/Topics/Mutable Set/Division problem/out/production/classes/
+/Topics/Quantifiers/OK Computer/out/
+/Topics/Quantifiers/OK Computer/out/production/classes/
+/Topics/Regexps in use/Aaaaaaa to a/out/
+/Topics/Regexps in use/Aaaaaaa to a/out/production/classes/
+/Topics/Regexps in use/Removing chords/out/
+/Topics/Regexps in use/Removing chords/out/production/classes/
+/Topics/Regexps in use/Serial number for game/out/
+/Topics/Regexps in use/Serial number for game/out/production/classes/
+/Topics/Regexps in use/Sike, that's the wrong number/out/
+/Topics/Regexps in use/Sike, that's the wrong number/out/production/classes/
+/Topics/Regexps in use/Splitting with spaces/out/
+/Topics/Regexps in use/Splitting with spaces/out/production/classes/
+/Topics/Regexps in use/Web colors/out/
+/Topics/Regexps in use/Web colors/out/production/classes/
+/Words Virtuoso/task/build/
+/Words Virtuoso/task/out/
+/Words Virtuoso/task/out/production/classes/

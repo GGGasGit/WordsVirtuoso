@@ -1,0 +1,21 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: \u001b[38;5;232m
+- text: \u001b46m
+- text: \u001b[0m
+- text: \u001b[36m
+files:
+- name: src/Main.kt
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    fun main(args: Array<String>) {
+      // put your code here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/18195#comment
+status: Solved
+record: -1
+local_check: false
